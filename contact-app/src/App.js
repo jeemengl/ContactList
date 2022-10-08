@@ -23,8 +23,11 @@ function App() {
 
   //update contacts
   const editContactHandler = async (contact) => {
-    console.log(contact)
     const response = await api.put(`/contacts/${contact.id}`, contact);
+    const {email, id, name} = response.data;
+    setContacts(contacts.map((contact) => {
+      return contact.id === id ? {...response.data} : contact;
+    }))
   }
 
   // retrieve contacts

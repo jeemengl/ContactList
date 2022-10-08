@@ -3,7 +3,6 @@ import {Link} from "react-router-dom"
 
 const ContactCard = (props) => {
     const {id, name, email} = props.contact;
-    console.log(props.contact)
     return (
         <div className="item">
             <div className="content">

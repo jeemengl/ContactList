@@ -6,7 +6,6 @@ const AddContact = (props) => {
     const [state, setState] = useState({})
     const navigate = useNavigate()
     const add = (e) => {
-        console.log(props)
         e.preventDefault();
         if(state.name === undefined || state.email === undefined || JSON.stringify(state) === "{}"){
             alert("both fields")
